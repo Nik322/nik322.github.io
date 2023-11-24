@@ -1,0 +1,347 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4e3629; /* Цвет заголовка - темный коричневый */
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center; /* Выравнивание элементов по вертикали по центру */
+}
+
+nav {
+    flex-grow: 1; /* Растягивает nav на всю доступную ширину */
+    display: flex;
+    justify-content: space-around;
+    background-color: #3d2921;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+nav a {
+    color: #8c5b24;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #d9b59c; /* Изменение цвета при наведении для эффекта интерактивности */
+}
+
+main {
+    display: flex;
+    flex-direction: column; /* Все элементы в столбец */
+    align-items: center;
+    padding: 20px;
+    background-color: #4e3629;
+}
+
+.content {
+    text-align: center;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    background-color: #3d2921;
+    color: #8c5b24;
+    padding: 20px;
+}
+
+footer h3{
+    color: #cb7f1b;
+}
+
+/* Стили для каждой колонки футера */
+.footer-column {
+    padding: 20px;
+}
+
+/* Заголовок колонки */
+.footer-column h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Стили для ссылок в колонках */
+.footer-column a {
+    color: #8c5b24;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.social-button {
+    position: relative;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    background: rgb(63, 32, 6);
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+.social-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    opacity: 20%;
+    z-index: -1; /* Изменено на -1 */
+    transition: height 1s, opacity 0.3s;
+}
+
+.social-button:hover::before {
+    height: 100%;
+    opacity: 1;
+    content: '';
+}
+
+.social-button span {
+    position: relative;
+    z-index: 1; /* Добавлено для текста */
+}
+
+.vk::before {
+    background: linear-gradient(45deg, #000000, #3d0600, #a80000);
+}
+
+.telegram::before {
+    background: linear-gradient(45deg, #f6c50e, #c7852b, #87512f);
+}
+
+.instagram::before {
+    background: linear-gradient(45deg, #f86e12, #fe7920, #6e726e);
+}
+
+.open-form-button {
+    background-color: #3f2006;
+    color: #8c5b24;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 20px;
+}
+
+.registration-form-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 30px; /* Изменен отступ для добавления больше места справа */
+    background-color: #3f2006;
+    box-shadow: 0 0 10px rgba(161, 134, 134, 0.3);
+    z-index: 1000;
+    border-radius: 20px;
+    color: #cb7f1b;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input,
+select,
+button {
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 20px;
+    background-color: #8c5b24;;
+}
+
+button {
+    background-color: #422d0c;
+    color: #cb7f1b;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.card {
+    width: 150px;
+    height: 200px;
+    perspective: 1000px;
+    cursor: pointer;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #cb7f1b;
+    background-color: #3f2006;
+    color: #8C5B24FF;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+h1, h2{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 30px;
+    color: #cb7f1b;
+}
+
+h4{
+    font-size: 25px;
+    color: #cb7f1b;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px; /* Добавлен отступ сверху между заголовками и карточками */
+}
+
+.card-front img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.vacancy {
+    width: 80%; /* Ширина блока с описанием вакансии */
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #3f2006;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.vacancy h5 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.vacancy p {
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.job-description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.job-description > div {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.job-description h6,
+.job-description h7,
+.job-description h8,
+.job-description h9,
+.job-description h10,
+.job-description h11,
+.job-description h12,
+.job-description h13,
+.job-description h14,
+.job-description h15,
+.job-description h16,
+.job-description h17,
+.job-description h18,
+.job-description h19,
+.job-description h20 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #cb7f1b;
+}
+
+.job-description ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.job-description ul li {
+    margin-bottom: 5px;
+}
+
+.marketolog h9,
+.marketolog h10,
+.marketolog h11,
+.marketolog h12 {
+    font-size: 24px;
+    color: #cb7f1b;
+}
+
+.operator h13,
+.operator h14,
+.operator h15,
+.operator h16 {
+    font-size: 24px;
+    color: #cb7f1b;
+}
+
+.bober h17,
+.bober h18,
+.bober h19,
+.bober h20 {
+    font-size: 24px;
+    color: #cb7f1b;
+}
+
+h5{
+    color: #cb7f1b;
+}
+
+.gruzchik,
+.marketolog,
+.operator,
+.bober{
+    color: #8C5B24FF;
+}

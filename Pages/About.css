@@ -1,0 +1,195 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4e3629; /* Цвет заголовка - темный коричневый */
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center; /* Выравнивание элементов по вертикали по центру */
+}
+
+nav {
+    flex-grow: 1; /* Растягивает nav на всю доступную ширину */
+    display: flex;
+    justify-content: space-around;
+    background-color: #3d2921;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+nav a {
+    color: #8c5b24;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #d9b59c; /* Изменение цвета при наведении для эффекта интерактивности */
+}
+
+main {
+    display: flex;
+    flex-direction: column; /* Все элементы в столбец */
+    align-items: center;
+    padding: 20px;
+    background-color: #4e3629;
+}
+
+.content {
+    text-align: center;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    background-color: #3d2921;
+    color: #8c5b24;
+    padding: 20px;
+}
+
+footer h3{
+    color: #cb7f1b;
+}
+
+/* Стили для каждой колонки футера */
+.footer-column {
+    padding: 20px;
+}
+
+/* Заголовок колонки */
+.footer-column h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Стили для ссылок в колонках */
+.footer-column a {
+    color: #8c5b24;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.social-button {
+    position: relative;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    background: rgb(63, 32, 6);
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+.social-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    opacity: 20%;
+    z-index: -1; /* Изменено на -1 */
+    transition: height 1s, opacity 0.3s;
+}
+
+.social-button:hover::before {
+    height: 100%;
+    opacity: 1;
+    content: '';
+}
+
+.social-button span {
+    position: relative;
+    z-index: 1; /* Добавлено для текста */
+}
+
+.vk::before {
+    background: linear-gradient(45deg, #000000, #3d0600, #a80000);
+}
+
+.telegram::before {
+    background: linear-gradient(45deg, #f6c50e, #c7852b, #87512f);
+}
+
+.instagram::before {
+    background: linear-gradient(45deg, #f86e12, #fe7920, #6e726e);
+}
+
+.zagolovok {
+    text-align: center;
+}
+
+main p {
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 20px;
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-indent: 20px; /* Абзацный отступ */
+    font-size: 23px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 250px;
+    height: 200px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    border: 1px solid #4e3629;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+
+.caption {
+    background: rgb(78, 54, 41);
+    color: #8c5b24;
+    padding: 3px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h2, h3, h4{
+    font-size: 30px;
+    color: #CB7F1BFF;
+}
+
+h1{
+    font-size: 35px;
+    color: #CB7F1BFF;
+}
+
+p{
+    color: #8C5B24FF
+}
