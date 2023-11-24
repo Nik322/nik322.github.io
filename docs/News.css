@@ -1,13 +1,11 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f0ec; /* Цвет фона, напоминающий шоколад */
 }
 
 header {
-    background-color: #64403e; /* Цвет заголовка - темный коричневый */
-    color: #fff;
+    background-color: #4e3629; /* Цвет заголовка - темный коричневый */
     padding: 10px;
     text-align: center;
     display: flex;
@@ -18,12 +16,13 @@ nav {
     flex-grow: 1; /* Растягивает nav на всю доступную ширину */
     display: flex;
     justify-content: space-around;
-    background-color: #7e5a58;
+    background-color: #3d2921;
     padding: 10px;
+    border-radius: 30px;
 }
 
 nav a {
-    color: #fff;
+    color: #f5cb9c;
     text-decoration: none;
     font-weight: bold;
     font-size: 22px;
@@ -36,73 +35,41 @@ nav a:hover {
 
 main {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Все элементы в столбец */
     align-items: center;
-    height: 80vh; /* Пример высоты, чтобы контент был посередине страницы */
-    background-color: #64403e;
+    padding: 20px;
+    background-color: #4e3629;
 }
 
 .content {
     text-align: center;
 }
 
-h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #340c0c;
-}
-
-.catalog-button {
-    padding: 10px 20px;
-    font-size: 20px;
-    background-color: #7e5a58;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    border-radius: 20px;
-}
-
-.catalog-button:hover {
-    background-color: #64403e;
-}
-
-.circle-cards-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px; /* Добавлен отступ сверху между блоками */
-}
-
-.circle-card {
-    width: 155px;
-    height: 155px;
-    background-color: #64403e;
-    border-radius: 50%; /* Делаем карточку круглой */
-    margin: 100px; /* Добавляем отступ между карточками */
-    box-shadow: 0 0 20px rgb(145, 99, 96);
-    color: white;
-}
-
-.circle-card h1{
-    color: #340C0CFF;
-}
-
 footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    background-color: #3b2e2d;
-    color: #fff;
+    background-color: #3d2921;
+    color: #8c5b24;
     padding: 20px;
 }
 
 footer h3{
-    color: #340C0CFF;
+    color: #cb7f1b;
 }
 
 /* Стили для каждой колонки футера */
 .footer-column {
     padding: 20px;
+}
+
+p{
+    color: #F5CB9CFF;
+}
+
+footer ul{
+    list-style: none;
+    padding-left: 0;
 }
 
 /* Заголовок колонки */
@@ -113,7 +80,7 @@ footer h3{
 
 /* Стили для ссылок в колонках */
 .footer-column a {
-    color: #fff;
+    color: #f5cb9c;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -130,11 +97,10 @@ footer h3{
     margin: 10px;
     font-size: 18px;
     text-decoration: none;
-    color: #000000;
-    background: rgba(162, 162, 162, 0.37);
+    background: rgb(63, 32, 6);
     cursor: pointer;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 50%;
     z-index: 100;
 }
 
@@ -145,7 +111,6 @@ footer h3{
     left: 0;
     width: 100%;
     height: 0;
-    background: linear-gradient(45deg, #3498db, #9b59b6);
     opacity: 20%;
     z-index: -1; /* Изменено на -1 */
     transition: height 1s, opacity 0.3s;
@@ -163,17 +128,13 @@ footer h3{
 }
 
 .vk::before {
-    background: linear-gradient(45deg, #3b5998, #869dc7);
+    background: linear-gradient(45deg, #000000, #3d0600, #a80000);
 }
 
 .telegram::before {
-    background: linear-gradient(45deg, #00aced, #0724e0);
+    background: linear-gradient(45deg, #f6c50e, #c7852b, #87512f);
 }
 
 .instagram::before {
-    background: linear-gradient(45deg, #e4405f, #ec7a83);
-}
-
-.social-button:hover {
-    background: transparent;
+    background: linear-gradient(45deg, #f86e12, #fe7920, #6e726e);
 }

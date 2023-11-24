@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -71,9 +71,18 @@ footer h3{
 
 /* Стили для ссылок в колонках */
 .footer-column a {
-    color: #8c5b24;
+    color: #f5cb9c;
     text-decoration: none;
     transition: color 0.3s;
+}
+
+p{
+    color: #F5CB9CFF;
+}
+
+footer ul{
+    list-style: none;
+    padding-left: 0;
 }
 
 .social-buttons {
@@ -168,7 +177,7 @@ main p {
 
 .caption {
     background: rgb(78, 54, 41);
-    color: #8c5b24;
+    color: #f5cb9c;
     padding: 3px;
     text-align: center;
     font-size: 20px;
@@ -191,5 +200,5 @@ h1{
 }
 
 p{
-    color: #8C5B24FF
+    color: #f5cb9c
 }

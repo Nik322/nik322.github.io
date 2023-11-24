@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -71,9 +71,14 @@ footer h3{
 
 /* Стили для ссылок в колонках */
 .footer-column a {
-    color: #8c5b24;
+    color: #f5cb9c;
     text-decoration: none;
     transition: color 0.3s;
+}
+
+footer ul{
+    list-style: none;
+    padding-left: 0;
 }
 
 .social-buttons {
@@ -164,7 +169,7 @@ h2 {
     border-radius: 50%; /* Делаем карточку круглой */
     margin: 100px; /* Добавляем отступ между карточками */
     box-shadow: 0 0 20px rgb(122, 78, 72);
-    color: #8c5b24;
+    color: #f5cb9c;
 }
 
 .circle-card h1{
@@ -195,4 +200,8 @@ h2 {
 /* Дополнительные стили для плавного перехода при убирании курсора */
 .circle-card:not(:hover) {
     transition: transform 0.3s ease-in-out;
+}
+
+p{
+    color: #F5CB9CFF;
 }
