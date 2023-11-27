@@ -255,6 +255,7 @@ h4{
 
 .cards {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 20px; /* Добавлен отступ сверху между заголовками и карточками */
 }
@@ -285,7 +286,7 @@ h4{
 
 .job-description {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .job-description > div {
@@ -453,4 +454,16 @@ h5{
     .social-buttons {
         flex-direction: row; /* Кнопки будут располагаться вертикально */
     }
+}
+
+@media screen and (max-width: 600px) {
+    .job-description > div {
+        width: 90%; /* Занимать всю доступную ширину */
+        order: 2; /* Изменить порядок для стекования на маленьких экранах */
+    }
+}
+
+.job-description > div {
+    width: 100%;
+    order: 1; /* Исходный порядок */
 }
