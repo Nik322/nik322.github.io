@@ -266,7 +266,7 @@ p{
     }
 
     .burger-menu.active {
-        transform: rotate(90deg); /* Поворот кнопки при активации */
+        transform: rotate(360deg); /* Поворот кнопки при активации */
     }
 }
 

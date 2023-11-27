@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Title</title>
     <link rel="stylesheet" href="Catalog.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +17,10 @@
     <div class="logo">
         <a href="index.html"><img src="Logo1.svg" alt="Логотип" width="150" height="150"></a>
     </div>
-    <nav>
+    <button class="burger-menu" onclick="toggleNav()">
+        <i class="fas fa-bars"></i>
+    </button>
+    <nav class="main-nav">
         <a href="About.html">О фабрике</a>
         <a href="Catalog.html">Каталог</a>
         <a href="Vacancies.html">Вакансии</a>
@@ -40,6 +44,7 @@
         </div>
     </div>
     <script src="Catalog.js"></script>
+    <script src="index.js"></script>
 </main>
 <footer class="footer">
     <div class="footer-column about-us">
