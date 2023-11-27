@@ -164,6 +164,7 @@ h2 {
     display: flex;
     justify-content: center;
     margin-top: 20px; /* Добавлен отступ сверху между блоками */
+    flex-wrap: wrap; /* Добавлено свойство flex-wrap */
 }
 
 .circle-card {
@@ -174,6 +175,18 @@ h2 {
     margin: 100px; /* Добавляем отступ между карточками */
     box-shadow: 0 0 20px rgb(122, 78, 72);
     color: #f5cb9c;
+}
+
+@media screen and (max-width: 768px) {
+    .circle-card {
+        margin: 10px; /* Уменьшаем отступ между карточками на меньших экранах */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .circle-card {
+        margin: 5px; /* Еще больше уменьшаем отступ между карточками на самых маленьких экранах */
+    }
 }
 
 .circle-card h1{
@@ -272,4 +285,36 @@ p{
 .logo{
     z-index: 100;
 }
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        grid-template-columns: repeat(2, 1fr); /* Изменяем количество колонок на меньших экранах */
+    }
+
+    .footer-column {
+        text-align: center; /* Выравниваем текст по центру */
+    }
+
+    p {
+        font-size: 14px; /* Уменьшение размера шрифта на узких экранах */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .social-buttons {
+        flex-direction: column; /* Кнопки будут располагаться вертикально */
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer {
+        grid-template-columns: 1fr; /* Один столбец на самых маленьких экранах */
+    }
+
+    .social-buttons {
+        flex-direction: row; /* Кнопки будут располагаться вертикально */
+    }
+}
+
 
