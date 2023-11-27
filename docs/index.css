@@ -209,3 +209,67 @@ h2 {
 p{
     color: #F5CB9CFF;
 }
+
+/* Добавьте эти стили в конец вашего текущего CSS */
+
+.burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #8c5b24;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: transform 0.3s ease-in-out; /* Добавлено для анимации */
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        max-height: 50vh; /* Ограничиваем высоту до половины экрана */
+        overflow-y: auto; /* Добавлено для прокрутки, если высота превышает max-height */
+        background-color: #3d2921;
+        border-radius: 10px;
+        z-index: 1;
+        transition: max-height 0.5s ease-in-out; /* Добавлено для анимации */
+    }
+
+    .main-nav a {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .main-nav a:hover {
+        background-color: #64403e;
+    }
+
+    .main-nav.show {
+        display: flex;
+        max-height: 50vh; /* Высота, когда меню отображается */
+    }
+
+    .burger-menu.active {
+        transform: rotate(90deg); /* Поворот кнопки при активации */
+    }
+}
+
+.logo{
+    z-index: 100;
+}
+
