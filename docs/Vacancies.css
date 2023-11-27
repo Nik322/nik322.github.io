@@ -461,6 +461,10 @@ h5{
         width: 90%; /* Занимать всю доступную ширину */
         order: 2; /* Изменить порядок для стекования на маленьких экранах */
     }
+
+    .registration-form-container{
+        width: 80%;
+    }
 }
 
 .job-description > div {
