@@ -263,3 +263,40 @@ p{
 .logo{
     z-index: 100;
 }
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        grid-template-columns: repeat(2, 1fr); /* Изменяем количество колонок на меньших экранах */
+        padding: 0;
+    }
+
+    .footer-column {
+        text-align: center; /* Выравниваем текст по центру */
+    }
+
+    p {
+        font-size: 14px; /* Уменьшение размера шрифта на узких экранах */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .social-buttons {
+        flex-direction: column; /* Кнопки будут располагаться вертикально */
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .footer {
+        grid-template-columns: 1fr; /* Один столбец на самых маленьких экранах */
+        padding: 0;
+    }
+
+    .footer-column{
+        padding: 0;
+    }
+
+    .social-buttons {
+        flex-direction: row; /* Кнопки будут располагаться вертикально */
+    }
+}
