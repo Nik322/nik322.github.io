@@ -139,6 +139,13 @@ p{
     background: linear-gradient(45deg, #f86e12, #fe7920, #6e726e);
 }
 
+.copyright {
+    font-size: 10px;
+    text-align: center;
+    margin: 0;
+    background-color: #3d2921;
+}
+
 .open-form-button {
     background-color: #3f2006;
     color: #f5cb9c;

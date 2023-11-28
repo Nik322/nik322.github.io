@@ -139,6 +139,13 @@ footer ul{
     background: linear-gradient(45deg, #f86e12, #fe7920, #6e726e);
 }
 
+.copyright {
+    font-size: 10px;
+    text-align: center;
+    margin: 0;
+    background-color: #3d2921;
+}
+
 h2 {
     font-size: 24px;
     margin-bottom: 20px;

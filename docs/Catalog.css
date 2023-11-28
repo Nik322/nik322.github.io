@@ -139,6 +139,13 @@ p{
     background: linear-gradient(45deg, #f86e12, #fe7920, #6e726e);
 }
 
+.copyright {
+    font-size: 10px;
+    text-align: center;
+    margin: 0;
+    background-color: #3d2921;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* автоматическое размещение с минимальной шириной 200px и максимальной 1fr (равномерно растягивается) */
