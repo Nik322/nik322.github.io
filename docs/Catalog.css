@@ -274,6 +274,8 @@ header .shopping span{
     width: 100%;
     padding: 10px;
     border-radius: 20px;
+    outline: none;
+    box-shadow: 0 0 10px rgb(43, 49, 73);
 }
 .card{
     position: fixed;
