@@ -415,6 +415,11 @@ header .shopping span{
     .burger-menu.active {
         transform: rotate(360deg);
     }
+    
+    nav a{
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media screen and (max-width: 1024px) {
