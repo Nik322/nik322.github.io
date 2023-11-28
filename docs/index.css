@@ -277,8 +277,8 @@ p{
     }
 }
 
-.logo{
-    z-index: 100;
+.hidden{
+    display: none;
 }
 
 @media screen and (max-width: 1024px) {
@@ -318,7 +318,7 @@ p{
     }
 
     .social-buttons {
-        flex-direction: row; /* Кнопки будут располагаться вертикально */
+        flex-direction: row;
     }
 
     .circle-card {

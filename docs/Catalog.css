@@ -27,6 +27,8 @@ nav a {
     font-weight: bold;
     font-size: 22px;
     transition: color 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
 }
 
 nav a:hover {
@@ -281,18 +283,6 @@ header .shopping span{
     box-shadow: 0 0 10px rgb(43, 49, 73);
 }
 
-@media screen and (max-width: 1024px) {
-    .list {
-        grid-template-columns: repeat(2, 1fr); /* Две карточки в ряду на экранах до 1024px */
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .list {
-        grid-template-columns: 1fr; /* Одна карточка в ряду на экранах до 768px */
-    }
-}
-
 .card{
     position: fixed;
     top:0;
@@ -301,6 +291,7 @@ header .shopping span{
     background-color: #3d2921;
     height: 100vh;
     transition: 0.5s;
+    z-index: 1000;
 }
 .active .card{
     left: calc(100% - 500px);
@@ -344,6 +335,7 @@ header .shopping span{
     grid-template-columns: 100px repeat(3, 1fr);
     color: #8c5b24;
     row-gap: 10px;
+    text-align: center;
 }
 .listCard li div{
     display: flex;
@@ -381,6 +373,10 @@ header .shopping span{
     justify-content: space-around;
 }
 
+.hidden{
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
     .burger-menu {
         display: block;
@@ -412,43 +408,59 @@ header .shopping span{
 
     .main-nav.show {
         display: flex;
-        max-height: 50vh; /* Высота, когда меню отображается */
+        max-height: 50vh;
     }
 
     .burger-menu.active {
-        transform: rotate(90deg); /* Поворот кнопки при активации */
+        transform: rotate(360deg);
     }
-}
-
-.logo{
-    z-index: 100;
 }
 
 @media screen and (max-width: 1024px) {
     .footer {
-        grid-template-columns: repeat(2, 1fr); /* Изменяем количество колонок на меньших экранах */
+        grid-template-columns: repeat(2, 1fr);
         padding: 0;
     }
 
     .footer-column {
-        text-align: center; /* Выравниваем текст по центру */
+        text-align: center;
     }
 
     p {
-        font-size: 14px; /* Уменьшение размера шрифта на узких экранах */
+        font-size: 14px;
+    }
+
+    .list {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width: 768px) {
     .social-buttons {
-        flex-direction: column; /* Кнопки будут располагаться вертикально */
+        flex-direction: column;
         align-items: flex-start;
+    }
+
+    .list {
+        grid-template-columns: 1fr;
+    }
+    .card{
+        left: 100%;
+        width: 300px;
+    }
+    .active .card{
+        left: calc(100% - 300px);
+    }
+    .listCard li {
+        display: grid;
+        grid-template-columns: 100px repeat(1, 1fr);
+        margin-bottom: 10px;
     }
 }
 
 @media screen and (max-width: 425px) {
     .footer {
-        grid-template-columns: 1fr; /* Один столбец на самых маленьких экранах */
+        grid-template-columns: 1fr;
         padding: 0;
     }
 
@@ -457,7 +469,8 @@ header .shopping span{
     }
 
     .social-buttons {
-        flex-direction: row; /* Кнопки будут располагаться вертикально */
+        flex-direction: row;
     }
 }
+
 

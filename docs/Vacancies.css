@@ -139,6 +139,10 @@ p{
     background: linear-gradient(45deg, #f86e12, #fe7920, #6e726e);
 }
 
+.hidden{
+    display: none;
+}
+
 .copyright {
     font-size: 10px;
     text-align: center;

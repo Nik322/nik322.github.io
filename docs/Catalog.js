@@ -18,37 +18,37 @@ let products = [
         id: 1,
         name: 'Шоколадный бобер',
         image: '1.jpg',
-        price: 120000
+        price: 120
     },
     {
         id: 2,
         name: 'Кексик-бабочка',
         image: '2.jpg',
-        price: 120000
+        price: 325
     },
     {
         id: 3,
         name: 'Шоколадные печенья',
         image: '3.jpg',
-        price: 220000
+        price: 227
     },
     {
         id: 4,
         name: 'Тирамису',
         image: '4.jpg',
-        price: 123000
+        price: 555
     },
     {
         id: 5,
         name: 'Набор фирменных конфет',
         image: '5.jpg',
-        price: 320000
+        price: 320
     },
     {
         id: 6,
         name: 'Торт Пражский',
         image: '6.jpg',
-        price: 120000
+        price: 120
     }
 ];
 let listCards  = [];
@@ -60,14 +60,13 @@ function initApp(){
             <img src="image/${value.image}">
             <div class="title">${value.name}</div>
             <div class="price">${value.price.toLocaleString()}</div>
-            <button onclick="addToCard(${key})">Add To Card</button>`;
+            <button onclick="addToCard(${key})">Добавить в корзину</button>`;
         list.appendChild(newDiv);
     })
 }
 initApp();
 function addToCard(key){
     if(listCards[key] == null){
-        // copy product form list to list card
         listCards[key] = JSON.parse(JSON.stringify(products[key]));
         listCards[key].quantity = 1;
     }
