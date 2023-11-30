@@ -85,7 +85,7 @@ function reloadCard(){
                 <div><img src="image/${value.image}"/></div>
                 <div>${value.name}</div>
                 <div>${value.price.toLocaleString()}</div>
-                <div>
+                <div>Ы
                     <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
                     <div class="count">${value.quantity}</div>
                     <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
@@ -97,7 +97,7 @@ function reloadCard(){
     quantity.innerText = count;
 }
 function changeQuantity(key, quantity){
-    if(quantity == 0){
+    if(quantity === 0){
         delete listCards[key];
     }else{
         listCards[key].quantity = quantity;
