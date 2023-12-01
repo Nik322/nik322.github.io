@@ -144,10 +144,11 @@ p{
 }
 
 .copyright {
-    font-size: 10px;
+    font-size: 16px;
     text-align: center;
     margin: 0;
     background-color: #3d2921;
+    padding: 20px 30%;
 }
 
 .open-form-button {
