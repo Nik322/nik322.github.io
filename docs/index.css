@@ -218,6 +218,8 @@ p{
     color: #F5CB9CFF;
 }
 
+/* Добавьте эти стили в конец вашего текущего CSS */
+
 .burger-menu {
     display: none;
     background: none;
@@ -228,13 +230,14 @@ p{
     position: absolute;
     top: 10px;
     right: 10px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out; /* Добавлено для анимации */
 }
 
 .main-nav {
     display: flex;
     justify-content: space-around;
 }
+
 @media screen and (max-width: 768px) {
     .burger-menu {
         display: block;
@@ -247,12 +250,12 @@ p{
         top: 60px;
         right: 0;
         width: 100%;
-        max-height: 50vh;
-        overflow-y: auto;
+        max-height: 50vh; /* Ограничиваем высоту до половины экрана */
+        overflow-y: auto; /* Добавлено для прокрутки, если высота превышает max-height */
         background-color: #3d2921;
         border-radius: 10px;
         z-index: 1;
-        transition: max-height 0.5s ease-in-out;
+        transition: max-height 0.5s ease-in-out; /* Добавлено для анимации */
     }
 
     .main-nav a {
@@ -266,44 +269,47 @@ p{
 
     .main-nav.show {
         display: flex;
-        max-height: 50vh;
+        max-height: 50vh; /* Высота, когда меню отображается */
     }
 
     .burger-menu.active {
-        transform: rotate(360deg);
+        transform: rotate(360deg); /* Поворот кнопки при активации */
     }
 }
 
 .hidden{
     display: none;
 }
+
 @media screen and (max-width: 1024px) {
     .footer {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* Изменяем количество колонок на меньших экранах */
         padding: 0;
     }
 
     .footer-column {
-        text-align: center;
+        text-align: center; /* Выравниваем текст по центру */
     }
 
     p {
-        font-size: 14px;
+        font-size: 14px; /* Уменьшение размера шрифта на узких экранах */
     }
 }
+
 @media screen and (max-width: 768px) {
     .social-buttons {
-        flex-direction: column;
+        flex-direction: column; /* Кнопки будут располагаться вертикально */
         align-items: flex-start;
     }
 
     .circle-card {
-        margin: 10px;
+        margin: 10px; /* Уменьшаем отступ между карточками на меньших экранах */
     }
 }
+
 @media screen and (max-width: 425px) {
     .footer {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Один столбец на самых маленьких экранах */
         padding: 0;
     }
 
@@ -316,6 +322,6 @@ p{
     }
 
     .circle-card {
-        margin: 5px;
+        margin: 5px; /* Еще больше уменьшаем отступ между карточками на самых маленьких экранах */
     }
 }
