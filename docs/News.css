@@ -335,6 +335,8 @@ h1, h2, h4, h5, h6, h8 {
 
     .text1, .text2, .text3 {
         margin-bottom: 20px;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .pik1, .pik2, .pik3 {
